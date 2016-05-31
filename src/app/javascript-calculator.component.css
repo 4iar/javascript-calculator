@@ -1,0 +1,49 @@
+#calculator {
+  background-color: darkslategray;
+  height: 50px;
+  width: 50px;
+
+  margin: 0 auto;
+  width: 650px;
+  height: 700px;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.screen {
+  background-color: #8a4182;
+  justify-content: center;
+
+  height: 120px;%;
+  flex: 1;
+  flex-basis: 20%;
+
+}
+
+.button {
+  text-align: center;
+  background-color: #66CC44;
+  font: normal normal bold 2em/1 Helvetica;
+  flex: 1;
+
+  flex-basis: 20%;
+  height: 70px;
+  margin: 5px;
+}
+
+/* http://learnlayout.com/box-sizing.html */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
