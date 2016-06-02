@@ -19,6 +19,9 @@ export class JavascriptCalculatorAppComponent {
 
   equals () {
     var equationToEval = '';
+    
+    // Keep the operators (delimiters)
+    // E.g. '2+2%2' --> ['2', '+', '2', '%', '2']
     var equationArray = this.equation.split(/(,|\+|%|-|x)/);
 
     // Number() the number strings to prevent leading zero numbers from being converted to octal
