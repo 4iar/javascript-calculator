@@ -25,25 +25,25 @@ describe('App: JavascriptCalculator', () => {
       inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
         app.equation = '2++';
         app.equals();
-        expect(app.display).toEqual('NaN');
+        expect(app.equation).toEqual('NaN');
       }));
 
-    it('it should evaluate the expression in this.equation and put the result in this.display',
+    it('it should evaluate the expression in this.equation and put the result in this.equation',
       inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
         app.equation = '2+2';
         app.equals();
-        expect(app.display).toEqual('4');
+        expect(app.equation).toEqual('4');
         
         app.equation = '9/3';
         app.equals();
-        expect(app.display).toEqual('3');
+        expect(app.equation).toEqual('3');
       }));
 
     it('it should not convert numbers with leading zeroes to octal ',
       inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
         app.equation = '017';
         app.equals();
-        expect(app.display).toEqual('17');
+        expect(app.equation).toEqual('17');
       }));
   });
 

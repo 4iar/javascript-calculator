@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 export class JavascriptCalculatorAppComponent {
   title = 'javascript-calculator works!';
 
-  display = '';
   equation = '';
 
   isAnOperator (p) {
@@ -44,8 +43,7 @@ export class JavascriptCalculatorAppComponent {
         result = 'NaN'
       }
     } finally {
-      this.display = String(result);
+      this.equation = String(result);
     }
-    this.equation = '';
   }
 }
