@@ -21,7 +21,7 @@
 
 #screen {
   width: 350px;
-  height: 75px;
+  height: 35px;
   margin: 10px 10px 10px 10px;
 
   flex-grow: 1;
