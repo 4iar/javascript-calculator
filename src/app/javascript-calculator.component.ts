@@ -22,6 +22,7 @@ export class JavascriptCalculatorAppComponent {
     // Keep the operators (delimiters)
     // E.g. '2+2%2' --> ['2', '+', '2', '%', '2']
     var equationArray = this.equation.split(/(\+|\/|-|\*)/);
+    equationArray = equationArray.filter(function (item) {return item !== ''});
 
     // Number() the number strings to prevent leading zero numbers from being converted to octal
     // E.g. 023 === 19 by default
