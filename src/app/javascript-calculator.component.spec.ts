@@ -33,10 +33,14 @@ describe('App: JavascriptCalculator', () => {
         app.equation = '2+2';
         app.equals();
         expect(app.equation).toEqual('4');
-        
-        app.equation = '9/3';
+
+        app.equation = '49+2';
         app.equals();
-        expect(app.equation).toEqual('3');
+        expect(app.equation).toEqual('51');
+
+        app.equation = '99/3';
+        app.equals();
+        expect(app.equation).toEqual('33');
       }));
 
     it('it should not convert numbers with leading zeroes to octal ',
