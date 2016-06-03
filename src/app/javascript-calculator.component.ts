@@ -47,4 +47,9 @@ export class JavascriptCalculatorAppComponent {
       this.equation = String(result);
     }
   }
+
+  pressNumber (number) {
+    this.equation += number;
+  };
+
 }

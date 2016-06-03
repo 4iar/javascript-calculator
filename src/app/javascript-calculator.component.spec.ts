@@ -51,6 +51,18 @@ describe('App: JavascriptCalculator', () => {
       }));
   });
 
+  describe('Function: pressNumber', () => {
+    it('should append the number this.equation',
+      inject([JavascriptCalculatorAppComponent], (app:JavascriptCalculatorAppComponent) => {
+        app.equation = '2+';
+        app.pressNumber('2');
+        expect(app.equation).toEqual('2+2');
+
+        app.equation = '';
+        app.pressNumber('9');
+        expect(app.equation).toEqual('9');
+      }));
+  })
 
 
 });
