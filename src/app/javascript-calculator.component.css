@@ -1,49 +1,76 @@
 #calculator {
-  background-color: darkslategray;
-  height: 50px;
-  width: 50px;
+  /*background-color: #272B30;
+  background: #272B30;*/
+  background: radial-gradient(#272b30, #41474D);
 
-  margin: 0 auto;
-  width: 650px;
-  height: 700px;
-}
 
-.flex-row {
+  width: 450px;
+  margin: 30px auto;
+  padding: 5px 5px 5px 5px;
+
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-}
-
-.flex-column {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-.screen {
-  background-color: #8a4182;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 
-  height: 120px;%;
-  flex: 1;
-  flex-basis: 20%;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+  border-radius: 2%;
+}
 
+#screen {
+  width: 350px;
+  height: 75px;
+  margin: 10px 10px 10px 10px;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  background-color: black;
+  padding-bottom: 50px;
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+  -webkit-text-fill-color: #4CAF50 ;
+  font-size: 2em;
+  text-align: right;
+  vertical-align: middle;
+  line-height: 75px;
 }
 
 .button {
-  text-align: center;
-  background-color: #66CC44;
-  font: normal normal bold 2em/1 Helvetica;
-  flex: 1;
+  width: 85px;
+  height: 50px;
+  flex-grow: 1;
+  flex-shrink: 1;
 
-  flex-basis: 20%;
-  height: 70px;
-  margin: 5px;
+  margin: 5px 5px 5px 5px;
+
+  border-radius: 5%;
+  border: 2px solid black;
+
+  background-color: #40454B;
+  -webkit-text-fill-color: #FFFFFF;
+  font-size: 1.5em;
 }
 
-/* http://learnlayout.com/box-sizing.html */
+button:focus {
+  outline: 0;
+}
+
+button:active{
+  border: 2px solid #4CAF50;
+}
+
+}
+
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 

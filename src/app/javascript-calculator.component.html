@@ -1,45 +1,30 @@
 <div id="calculator">
-  <div class="flex-row screen">
-    1 + 1 = 2
+
+  <div id="screen" class="row">
+    {{ equation }}
   </div>
 
-  <div class="flex-row">
-    <div class="button">1</div>
-    <div class="button">2</div>
-    <div class="button">3</div>
-    <div class="button">4</div>
-    <div class="button">5</div>
-  </div>
+  <button class="button" (click)="pressNumber('7')">7</button>
+  <button class="button" (click)="pressNumber('8')">8</button>
+  <button class="button" (click)="pressNumber('9')">9</button>
+  <button class="button" (click)="operation('+')">+</button>
 
-  <div class="flex-row">
-    <div class="button">6</div>
-    <div class="button">7</div>
-    <div class="button">8</div>
-    <div class="button">9</div>
-    <div class="button">10</div>
-  </div>
+  <button class="button" (click)="pressNumber('4')">4</button>
+  <button class="button" (click)="pressNumber('5')">5</button>
+  <button class="button" (click)="pressNumber('6')">6</button>
+  <button class="button" (click)="operation('-')">-</button>
 
-  <div class="flex-row">
-    <div class="button">1</div>
-    <div class="button">2</div>
-    <div class="button">3</div>
-    <div class="button">4</div>
-    <div class="button">5</div>
-  </div>
+  <button class="button" (click)="pressNumber('1')">1</button>
+  <button class="button" (click)="pressNumber('2')">2</button>
+  <button class="button" (click)="pressNumber('3')">3</button>
+  <button class="button" (click)="operation('/')">%</button>
 
-  <div class="flex-row">
-    <div class="button">1</div>
-    <div class="button">2</div>
-    <div class="button">3</div>
-    <div class="button">4</div>
-    <div class="button">5</div>
-  </div>
 
-  <div class="flex-row">
-    <div class="button">1</div>
-    <div class="button">2</div>
-    <div class="button">3</div>
-    <div class="button">4</div>
-    <div class="button">5</div>
-  </div>
+  <button class="button" (click)="pressNumber('0')">0</button>
+  <button class="button" (click)="operation('.')">.</button>
+  <button class="button" (click)="equals()">=</button>
+  <button class="button" (click)="operation('*')">X</button>
+
+  <button class="button" (click)="clear()">C</button>
+  <button class="button" (click)="backspace()"><-</button>
 </div>
