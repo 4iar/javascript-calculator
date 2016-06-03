@@ -15,11 +15,6 @@ describe('App: JavascriptCalculator', () => {
     expect(app).toBeTruthy();
   }));
 
-  it('should have as title \'javascript-calculator works!\'',
-      inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
-    expect(app.title).toEqual('javascript-calculator works!');
-  }));
-
   describe('Function: equals', () => {
     it('it should return NaN if the expression is invalid',
       inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
