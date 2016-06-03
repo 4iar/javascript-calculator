@@ -76,4 +76,14 @@ describe('App: JavascriptCalculator', () => {
         expect(app.equation).toEqual('40.');
       }));
   });
+
+  describe('Function: clear', () => {
+    it('should set this.equation to an empty string',
+      inject([JavascriptCalculatorAppComponent], (app:JavascriptCalculatorAppComponent) => {
+        app.equation = '2+4+2';
+        app.clear();
+        expect(app.equation).toEqual('');
+      }));
+  });
+  
 });
