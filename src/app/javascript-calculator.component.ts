@@ -59,4 +59,8 @@ export class JavascriptCalculatorAppComponent {
   clear () {
     this.equation = '';
   }
+
+  backspace () {
+    this.equation = this.equation.slice(0, this.equation.length - 1);
+  }
 }
