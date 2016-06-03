@@ -1,7 +1,8 @@
 #calculator {
   /*background-color: #272B30;
-  background: #272B30;*/
-  background: radial-gradient(#272b30, #41474D);
+  /*background: radial-gradient(#272b30, #41474D);*/
+
+  background: #41474d;
 
   box-shadow: 6px 6px 31px -9px rgba(0,0,0,0.75);
 
@@ -28,7 +29,7 @@
   flex-grow: 1;
   flex-shrink: 1;
 
-  background-color: black;
+  background-color: #201E1E;
   padding-bottom: 50px;
 
   white-space:nowrap;
@@ -56,6 +57,7 @@
   background-color: #40454B;
   -webkit-text-fill-color: #FFFFFF;
   font-size: 1.5em;
+  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=40454bff&noise=120012&density=50&opacity=11");
 }
 
 button:focus {
