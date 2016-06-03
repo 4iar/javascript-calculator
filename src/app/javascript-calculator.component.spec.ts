@@ -87,12 +87,7 @@ describe('App: JavascriptCalculator', () => {
         expect(app.equation).toEqual('');
       }));
     
-    it('should remove NaN on a single call',
-      inject([JavascriptCalculatorAppComponent], (app:JavascriptCalculatorAppComponent) => {
-        app.equation = 'NaN';
-        app.clear();
-        expect(app.equation).toEqual('');
-      })); 
+    
   });
 
   describe('Function: backspace', () => {
@@ -104,6 +99,13 @@ describe('App: JavascriptCalculator', () => {
         expect(app.equation).toEqual('2+4+');
         app.backspace();
         expect(app.equation).toEqual('2+4');
+      }));
+
+    it('should remove NaN on a single call',
+      inject([JavascriptCalculatorAppComponent], (app:JavascriptCalculatorAppComponent) => {
+        app.equation = 'NaN';
+        app.backspace();
+        expect(app.equation).toEqual('');
       }));
   });
 
