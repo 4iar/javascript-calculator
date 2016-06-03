@@ -52,4 +52,9 @@ export class JavascriptCalculatorAppComponent {
     this.equation += number;
   };
 
+  operation (op) {
+    this.equation += op;
+  };
+
+
 }

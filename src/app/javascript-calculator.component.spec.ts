@@ -62,7 +62,18 @@ describe('App: JavascriptCalculator', () => {
         app.pressNumber('9');
         expect(app.equation).toEqual('9');
       }));
-  })
+  });
 
+  describe('Function: operation', () => {
+    it('should append the operation to this.equation',
+      inject([JavascriptCalculatorAppComponent], (app:JavascriptCalculatorAppComponent) => {
+        app.equation = '2';
+        app.operation('+');
+        expect(app.equation).toEqual('2+');
 
+        app.equation = '40';
+        app.operation('.');
+        expect(app.equation).toEqual('40.');
+      }));
+  });
 });
