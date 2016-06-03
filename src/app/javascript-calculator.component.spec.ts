@@ -99,12 +99,12 @@ describe('App: JavascriptCalculator', () => {
     it('should remove the last character from this.equation',
       inject([JavascriptCalculatorAppComponent], (app:JavascriptCalculatorAppComponent) => {
         app.equation = '2+4+2';
-        
+
         app.backspace();
         expect(app.equation).toEqual('2+4+');
         app.backspace();
         expect(app.equation).toEqual('2+4');
       }));
-  }); 
-  
+  });
+
 });
