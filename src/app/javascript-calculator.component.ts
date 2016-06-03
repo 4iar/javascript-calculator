@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'javascript-calculator-app',
   templateUrl: 'javascript-calculator.component.html',
-  styleUrls: ['javascript-calculator.component.css']
+  styleUrls: ['javascript-calculator.component.css'],
+  host: {
+    '(window:keydown)': 'handleKey($event)'
+  },
 })
 export class JavascriptCalculatorAppComponent {
   title = 'javascript-calculator works!';
@@ -63,5 +66,36 @@ export class JavascriptCalculatorAppComponent {
 
   backspace () {
     this.equation = this.equation.slice(0, this.equation.length - 1);
+  }
+
+  handleKey (event) {
+    // Need to handle shift -- can't just shift AND 5/8 because layouts are different?
+    // sample event.code: 'KeyC', 'KeyX', 'Digit1', 'Digit2'
+    // this code is disgusting  TODO: make less bad
+    var key = event.code;
+    
+    if (key === 'Enter' || key === 'Equal') {
+      this.equals();
+      return;
+    }
+
+    if (key === 'Slash') {
+      this.operation('/');
+      return;
+    }
+
+    if (key === 'Minus') {
+      this.operation('-');
+      return;
+    }
+    
+    if (key.slice(0, 5) === 'Digit') {
+        this.pressNumber(key.slice(5));
+    } else if (key.slice(0, 3) === 'Key') {
+      switch (key.slice(3)) {
+        case 'C': this.clear(); break;
+        case 'X': this.operation('*'); break;
+      }
+    }
   }
 }
