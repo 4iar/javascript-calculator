@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   moduleId: module.id,
   selector: 'javascript-calculator-app',
@@ -55,7 +56,7 @@ export class JavascriptCalculatorAppComponent {
   operation (op) {
     this.equation += op;
   };
-  
+
   clear () {
     this.equation = '';
   }
