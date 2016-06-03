@@ -3,6 +3,7 @@
   background: #272B30;*/
   background: radial-gradient(#272b30, #41474D);
 
+  box-shadow: 6px 6px 31px -9px rgba(0,0,0,0.75);
 
   width: 450px;
   margin: 30px auto;
