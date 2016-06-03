@@ -13,16 +13,16 @@ export class JavascriptCalculatorAppComponent {
   equation = '';
 
   isAnOperator (p) {
-    var operators = ['%', 'x', '-', '+'];
+    var operators = ['/', '*', '-', '+'];
     return (operators.indexOf(p) !== -1);
   }
 
   equals () {
     var equationToEval = '';
-    
+
     // Keep the operators (delimiters)
     // E.g. '2+2%2' --> ['2', '+', '2', '%', '2']
-    var equationArray = this.equation.split(/(,|\+|%|-|x)/);
+    var equationArray = this.equation.split(/(,|\+|\/|-|\*)/);
 
     // Number() the number strings to prevent leading zero numbers from being converted to octal
     // E.g. 023 === 19 by default
