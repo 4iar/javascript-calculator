@@ -26,7 +26,7 @@ export class JavascriptCalculatorAppComponent {
     // Number() the number strings to prevent leading zero numbers from being converted to octal
     // E.g. 023 === 19 by default
     for (var i = 0; i < equationArray.length; i++) {
-      if (!this.isAnOperator(this.equation[i])) {
+      if (!this.isAnOperator(equationArray[i])) {
         equationToEval += Number(equationArray[i]);
       } else {
         equationToEval += equationArray[i];
