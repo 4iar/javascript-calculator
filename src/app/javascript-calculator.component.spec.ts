@@ -44,6 +44,13 @@ describe('App: JavascriptCalculator', () => {
         app.equals();
         expect(app.equation).toEqual('17');
       }));
+
+    it('if this.equation is an empty string it should be kept as an empty string when this.equals() is called',
+      inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
+        app.equation = '';
+        app.equals();
+        expect(app.equation).toEqual('');
+      }));
   });
 
   describe('Function: pressNumber', () => {
