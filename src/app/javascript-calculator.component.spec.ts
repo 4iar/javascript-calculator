@@ -20,6 +20,11 @@ describe('App: JavascriptCalculator', () => {
       expect(app.equationHistory).toEqual([]);
     }));
 
+  it('should initialise equation to an empty string',
+    inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
+      expect(app.equation).toEqual('');
+    }));
+
   describe('Function: equals', () => {
     it('it should return NaN if the expression is invalid',
       inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
