@@ -33,5 +33,5 @@
 </div>
 
 <div id="history">
-  <div *ngFor="let historicalEquation of equationHistory" class="historicalEquation">{{ historicalEquation }}</div>
+  <div *ngFor="let historicalEquation of equationHistory.slice().reverse()" class="historicalEquation animated slideInDown">{{ historicalEquation }}</div>
 </div>
