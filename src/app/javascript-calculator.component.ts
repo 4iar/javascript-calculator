@@ -69,7 +69,13 @@ export class JavascriptCalculatorAppComponent {
   }
 
   backspace () {
-    this.equation = this.equation.slice(0, this.equation.length - 1);
+    // Treat NaN as a single character so the user doesn't have to backspace 3 times to remove NaN
+    // TODO: might be cleaner to use a regex to catch NaN at the end
+    if (this.equation.slice(this.equation.length - 3, this.equation.length) === 'NaN') {
+      this.equation = this.equation.slice(0, this.equation.length - 3);
+    } else {
+      this.equation = this.equation.slice(0, this.equation.length - 1);
+    }
   }
 
   handleKey (event) {
