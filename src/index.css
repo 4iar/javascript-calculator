@@ -19,6 +19,7 @@ body {
     top:0px;
     right: 10px;
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif; 
 }
 
 .github-button:active,
