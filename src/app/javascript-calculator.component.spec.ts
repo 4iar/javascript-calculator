@@ -76,6 +76,12 @@ describe('App: JavascriptCalculator', () => {
         app.equation = '40';
         app.operation('.');
         expect(app.equation).toEqual('40.');
+
+        app.equation = '';
+        app.operation('(');
+        app.equation += '20';
+        app.operation(')');
+        expect(app.equation).toEqual('(20)');
       }));
   });
 

@@ -3,6 +3,8 @@
   <div id="screen" class="row">
     {{ equation }}
   </div>
+  <button class="button" (click)="operation('(')">(</button>
+  <button class="button" (click)="operation(')')">)</button>
 
   <button class="button" (click)="pressNumber('7')">7</button>
   <button class="button" (click)="pressNumber('8')">8</button>
