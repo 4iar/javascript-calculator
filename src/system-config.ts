@@ -3,7 +3,8 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-    'animate.min.css': 'vendor/animate.css/animate.min.css'
+    'animate.min.css': 'vendor/animate.css/animate.min.css',
+    'font-awesome.min.css': 'vendor/font-awesome/css/font-awesome.min.css'
 };
 
 /** User packages configuration. */

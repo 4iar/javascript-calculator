@@ -13,6 +13,7 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
       'animate.css/animate.min.css',
+      'font-awesome/css/font-awesome.min.css'
     ]
   });
 };
