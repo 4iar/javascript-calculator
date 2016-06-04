@@ -30,3 +30,7 @@
   <button class="button" (click)="operation('*')">x</button>
 
 </div>
+
+<div id="history">
+  <div *ngFor="let historicalEquation of equationHistory" class="historicalEquation">{{ historicalEquation }}</div>
+</div>
