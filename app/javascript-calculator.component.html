@@ -1,0 +1,37 @@
+
+<div id="calculator">
+
+  <div id="screen" class="row">
+    {{ equation }}
+  </div>
+  <button class="button" (click)="clear()">C</button>
+  <button class="button" (click)="backspace()">&larr;</button>
+  <button class="button" (click)="operation('(')">(</button>
+  <button class="button" (click)="operation(')')">)</button>
+
+  <button class="button" (click)="pressNumber('7')">7</button>
+  <button class="button" (click)="pressNumber('8')">8</button>
+  <button class="button" (click)="pressNumber('9')">9</button>
+  <button class="button" (click)="operation('+')">+</button>
+
+  <button class="button" (click)="pressNumber('4')">4</button>
+  <button class="button" (click)="pressNumber('5')">5</button>
+  <button class="button" (click)="pressNumber('6')">6</button>
+  <button class="button" (click)="operation('-')">-</button>
+
+  <button class="button" (click)="pressNumber('1')">1</button>
+  <button class="button" (click)="pressNumber('2')">2</button>
+  <button class="button" (click)="pressNumber('3')">3</button>
+  <button class="button" (click)="operation('/')">%</button>
+
+
+  <button class="button" (click)="pressNumber('0')">0</button>
+  <button class="button" (click)="operation('.')">.</button>
+  <button class="button" (click)="equals()">=</button>
+  <button class="button" (click)="operation('*')">x</button>
+
+</div>
+
+<div id="history">
+  <div *ngFor="let historicalEquation of equationHistory.slice().reverse()" class="historicalEquation animated slideInDown">{{ historicalEquation }}</div>
+</div>

@@ -1,0 +1,97 @@
+#calculator {
+  /*background-color: #272B30;
+  /*background: radial-gradient(#272b30, #41474D);*/
+
+  background: #41474d;
+
+  box-shadow: 6px 6px 31px -9px rgba(0,0,0,0.75);
+
+  width: 450px;
+  margin: 30px auto;
+  padding: 5px 5px 5px 5px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+  border-radius: 2%;
+}
+
+#screen {
+  width: 350px;
+  height: 35px;
+  margin: 10px 10px 10px 10px;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  background-color: #201E1E;
+  padding-bottom: 50px;
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+  -webkit-text-fill-color: #4CAF50 ;
+  font-size: 2em;
+  text-align: right;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+.button {
+  width: 85px;
+  height: 50px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  margin: 5px 5px 5px 5px;
+
+  border-radius: 5%;
+  border: 2px solid black;
+
+  background-color: #40454B;
+  -webkit-text-fill-color: #FFFFFF;
+  font-size: 1.5em;
+  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=40454bff&noise=120012&density=50&opacity=11");
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  border: 2px solid #4CAF50;
+}
+
+#history {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: 200px;
+
+  overflow: hidden;
+
+  backgrand-color: pink;
+
+  font-size: 1.3em;
+}
+
+.historicalEquation {
+  margin-bottom: 15px;
+
+  padding: 2px 2px 2px 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
