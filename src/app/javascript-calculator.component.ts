@@ -14,6 +14,7 @@ export class JavascriptCalculatorAppComponent {
   title = 'javascript-calculator works!';
 
   equation = '';
+  equationHistory = [];
 
   isAnOperator (p) {
     var operators = ['/', '*', '-', '+', '(', ')'];
@@ -47,12 +48,20 @@ export class JavascriptCalculatorAppComponent {
     var result = ''
     try {
       result = eval(equationToEval);
+      this.addResultToHistory(result);
     } catch (e) {
       if (e instanceof ReferenceError || e instanceof SyntaxError) {
         result = 'NaN'
       }
     } finally {
       this.equation = String(result);
+    }
+  }
+
+  addResultToHistory (result) {
+    var historicalEquation = this.equation + ' = ' + result
+    if (historicalEquation !== this.equationHistory[this.equationHistory.length - 1]) {
+      this.equationHistory.push(historicalEquation);
     }
   }
 

@@ -11,9 +11,14 @@ beforeEachProviders(() => [JavascriptCalculatorAppComponent]);
 
 describe('App: JavascriptCalculator', () => {
   it('should create the app',
-      inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
-    expect(app).toBeTruthy();
-  }));
+    inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
+      expect(app).toBeTruthy();
+    }));
+
+  it('should initialise equationHistory to an empty array',
+    inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
+      expect(app.equationHistory).toEqual([]);
+    }));
 
   describe('Function: equals', () => {
     it('it should return NaN if the expression is invalid',
@@ -51,6 +56,26 @@ describe('App: JavascriptCalculator', () => {
         app.equals();
         expect(app.equation).toEqual('');
       }));
+    
+    it('should push the equation and its result to this.equationHistory',
+      inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
+        app.equation = '2+2';
+        app.equals();
+        expect(app.equationHistory).toEqual(['2+2 = 4']);
+        app.equation = '5+5';
+        app.equals();
+        expect(app.equationHistory).toEqual(['2+2 = 4', '5+5 = 10']);
+      })); 
+    
+    it('does not push the equation to this.equationHistory if the new equation is identical to the previous one',
+      inject([JavascriptCalculatorAppComponent], (app: JavascriptCalculatorAppComponent) => {
+        app.equation = '2+2';
+        app.equals();
+        app.equation = '2+2';
+        app.equals();
+        expect(app.equationHistory).toEqual(['2+2 = 4']);
+      }));     
+    
   });
 
   describe('Function: pressNumber', () => {
