@@ -3,6 +3,8 @@
   <div id="screen" class="row">
     {{ equation }}
   </div>
+  <button class="button" (click)="clear()">C</button>
+  <button class="button" (click)="backspace()"><-</button>
   <button class="button" (click)="operation('(')">(</button>
   <button class="button" (click)="operation(')')">)</button>
 
@@ -25,8 +27,6 @@
   <button class="button" (click)="pressNumber('0')">0</button>
   <button class="button" (click)="operation('.')">.</button>
   <button class="button" (click)="equals()">=</button>
-  <button class="button" (click)="operation('*')">X</button>
+  <button class="button" (click)="operation('*')">x</button>
 
-  <button class="button" (click)="clear()">C</button>
-  <button class="button" (click)="backspace()"><-</button>
 </div>
