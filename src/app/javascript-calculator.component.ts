@@ -83,7 +83,7 @@ export class JavascriptCalculatorAppComponent {
     // sample event.code: 'KeyC', 'KeyX', 'Digit1', 'Digit2'
     // this code is disgusting  TODO: make less bad
     var key = event.code;
-    
+
     if (key === 'Enter' || key === 'Equal') {
       this.equals();
       return;
@@ -98,7 +98,7 @@ export class JavascriptCalculatorAppComponent {
       this.operation('-');
       return;
     }
-    
+
     if (key.slice(0, 5) === 'Digit') {
         this.pressNumber(key.slice(5));
     } else if (key.slice(0, 3) === 'Key') {
