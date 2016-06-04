@@ -1,10 +1,11 @@
+
 <div id="calculator">
 
   <div id="screen" class="row">
     {{ equation }}
   </div>
   <button class="button" (click)="clear()">C</button>
-  <button class="button" (click)="backspace()"><-</button>
+  <button class="button" (click)="backspace()">&larr;</button>
   <button class="button" (click)="operation('(')">(</button>
   <button class="button" (click)="operation(')')">)</button>
 
