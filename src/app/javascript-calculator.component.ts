@@ -21,6 +21,10 @@ export class JavascriptCalculatorAppComponent {
   }
 
   equals () {
+    if (this.equation === '') {
+      return;
+    }
+    
     var equationToEval = '';
 
     // Keep the operators (delimiters)
