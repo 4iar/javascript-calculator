@@ -1,6 +1,6 @@
 language: nodejs
 node_js:
-    - "0.10"
+    - "6.2"
 script: npm test
 before_install:
     - export DISPLAY=:99.0
