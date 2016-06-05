@@ -5,6 +5,8 @@ script: npm test
 before_install:
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
+    - npm cache clean
     - npm set registry http://registry.npmjs.org
+    - npm update -g
 before_script:
     - npm install
